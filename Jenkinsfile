@@ -1,14 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage ('version') {
+        stage('version') {
             steps {
-                sh 'python 3 --version'
+                sh 'python3 --version'
             }
         }
         stage('hello'){
             steps {
-                sh 'python 3 hello.py'
+                sh 'python3 hello.py'
             }
         }
     }
