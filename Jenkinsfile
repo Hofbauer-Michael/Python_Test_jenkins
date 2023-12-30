@@ -1,16 +1,33 @@
 pipeline {
     agent any
     stages {
-        stage('version') {
+        stage('compile Stage) {
             steps {
-                sh 'python3 --version'
+                withMaven(maven : 'maven_3_5_0') {
+                    sh 'mvn clean compile'
+
             }
         }
-        stage('hello'){
+
+    }
+
+        stage('Testing Stage) {
             steps {
-                sh 'python3 hello.py'
+                withMaven(maven : 'maven_3_5_0') {
+                    sh 'mvn test'
+
             }
         }
+
+    }
+       stage('Deployment Stage) {
+            steps {
+                withMaven(maven : 'maven_3_5_0') {
+                    sh 'mvn deploy'
+                }
+
+            }
+       }
     }
 }
 
