@@ -1,1 +1,5 @@
-print('hello.py')
+
+
+def hello():
+    print('hello.py')
+    return 'hello world'
