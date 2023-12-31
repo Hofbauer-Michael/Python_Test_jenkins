@@ -10,17 +10,7 @@ pipeline
 
   }
 
-  stages {
 
-    stage ('Build') {
-
-      steps {
-
-
-
-      }
-
-    }
 
     stage ('Test') {
 
