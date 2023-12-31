@@ -7,15 +7,6 @@ pipeline {
                 echo 'Hello World'
                 echo 'Hello World1'
             }
-
-    stages {
-        stage('Installing Pytest') {
-            steps {
-                echo 'Install Pytest'
-                bat 'test.py'
-            }
-
-            
         }
     }
 }
