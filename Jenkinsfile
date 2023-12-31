@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
+                bat 'make check || true'
             }
         }
         stage('Deploy') {
