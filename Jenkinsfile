@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Run Pytest') {
             steps {
                 echo 'Hello World'
                 echo 'Hello World1'
