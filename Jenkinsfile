@@ -1,5 +1,5 @@
 pipeline {
-    agent {
+    agent any
 
     stages {
         stage('Environment Installation') {
@@ -15,3 +15,5 @@ pipeline {
         }
     }
 }
+
+
