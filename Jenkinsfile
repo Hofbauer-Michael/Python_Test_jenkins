@@ -8,8 +8,8 @@ pipeline {
               pip install -m venv virtualenv==16.5.0
               python -m venv 
               Scripts\\activate.ps1
-              pip install -r requirements.txt
-              deactivate
+              pip install virtualenv -r requirements.txt
+              activate
               """
             }
         }
