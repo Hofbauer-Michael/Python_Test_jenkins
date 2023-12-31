@@ -2,10 +2,11 @@ pipeline {
     agent any
 
     stages {
-        stage('Install Pytest') {
+        stage('Installing packages') {
             steps {
-                echo 'Hello World'
-                echo 'Hello World1'
+                script {
+                    sh 'pip install -r requirements.txt'
+                }
             }
         }
 
