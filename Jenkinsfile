@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage('Installing packages') {
             steps {
-                script {
-                    bat 'pip install -r requirements.txt'
-                }
+                    git branch: 'main', url:  'pip install -r requirements.txt'
+                
             }
         }
 
