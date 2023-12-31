@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Hello World'
                 echo 'Hello World1'
-                bat 'pytest test.py'
+                bat 'test.py'
 
             }
         }
