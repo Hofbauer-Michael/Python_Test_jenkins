@@ -1,22 +1,21 @@
 pipeline {
-    agent any
-
+agent any
     stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
+        stage ('Build') {
+
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-                bat 'make check || true'
-            }
+        stage ('Test') {
+
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
+        stage ('QA') {
+
         }
+        stage ('Deploy') {
+
+        }
+        stage ('Monitor') {
+
+        }
+
     }
-}
+ }
