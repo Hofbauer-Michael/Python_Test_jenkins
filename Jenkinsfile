@@ -7,7 +7,6 @@ pipeline {
               virtualenv venv --distribute
               .venv/bin/activate
               powershell """
-
               pip install virtualenv==20.25.0
               python -m venv ${WORKSPACE}
               Scripts\\activate.ps1
