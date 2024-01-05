@@ -2,22 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Hello') {
             steps {
-                echo 'build application'
-                // bat 'mvnw clean compile'
+                echo 'Hello World'
             }
         }
-     stages {
-        stage('Test') {
-            steps {
-                echo 'test application'
-                // bat 'mvnw clean compile'
-            }
-            
-     }
-    
-}
-
-
+    }
 }
