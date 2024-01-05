@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Build Stage'
+                git 'https://github.com/Hofbauer-Michael/Python_Test_jenkins.git'
             }
         }
         stage('Test') {
