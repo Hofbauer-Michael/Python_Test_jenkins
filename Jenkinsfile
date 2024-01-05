@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                powershell 'python3 --version'
+                powershell 'Write-Output "Hello, World!"'
         
             }
         }
