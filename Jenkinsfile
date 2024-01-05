@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'python --verion'
+                powershell 'python3 --verion'
         
             }
         }
