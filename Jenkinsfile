@@ -5,7 +5,6 @@ pipeline {
         stage('Build') {
             steps {
             git 'https://github.com/Hofbauer-Michael/Python_Test_jenkins.git'
-                sh './mvnw clean compile'
                 // bat 'mvnw clean compile'
             }
         }
