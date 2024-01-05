@@ -4,11 +4,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-            git 'https://github.com/Hofbauer-Michael/Python_Test_jenkins.git'
                 // bat 'mvnw clean compile'
             }
         }
-    }
+     stages {
+        stage('Test') {
+            steps {
+                // bat 'mvnw clean compile'
+            }
+            
+     }
+    
 }
 
 
