@@ -12,7 +12,8 @@ pipeline {
         stage('build') {
             steps {
                 powershell 'pytest -v test.py -report'
-
+            }
+        }  
         stage('Built report') {
             steps {
                 powershell '.mvnw clean install site surefire-report:target'
