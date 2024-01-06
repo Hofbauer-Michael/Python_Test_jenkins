@@ -4,7 +4,7 @@ pipeline {
  stages {
   stage ('Assign Test Type') {
    steps {
-    powershell 'pytest ./Tests/
+    powershell pytest ./Tests/
      }
     }
    }
