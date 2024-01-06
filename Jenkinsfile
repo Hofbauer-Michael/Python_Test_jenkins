@@ -12,11 +12,19 @@ pipeline {
         stage('build') {
             steps {
                 powershell 'pytest -v test.py'
-                powershell 'mdir lib'
+
                 
 
         
             }
         }
+    }
+
+    post {
+        always{
+            echo 'report'
+
+        }
+
     }
 }
