@@ -29,7 +29,7 @@ pipeline {
        error("Undefined trigger type!")
        break
      }
-
+    println pTrigger
     }
    }
   }
