@@ -2,11 +2,14 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Checkout Codebase') {
             steps {
-                echo 'Hello World'
-                powershell 'pytest ./Tests/'
-            }
+                cleanWs()
+                git branch: 'main', url: 'https://github.com/Hofbauer-Michael/Python_Test_jenkins.git'
+
+            }           
+
+
         }
     }
 }
