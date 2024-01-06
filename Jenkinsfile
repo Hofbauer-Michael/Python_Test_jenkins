@@ -1,37 +1,28 @@
 pipeline {
  agent any
 
- 
- options {
-  timestamps ()
- }
  stages {
-  stage ('Assign Trigger') {
+  stage ('Assign Test Type') {
    steps {
     script {
-     switch (WORKSPACE) {
-      case ~/.*\\DEVELOP\\.*/:
-  
-       break
-      case ~/.*\\MASTER\\.*/:
-
-       break
-      case ~/.*\\PLAYGROUND\\.*/:
-
-       break
-      case ~/.*\\SMOKE\\.*/:
-
-       break
-      case ~/.*PULL_REQUEST_CHECKER.*/:
-
-       break
-      default:
-       error("Undefined trigger type!")
-       break
+     if (pTrigger != "PULL_REQUEST_CHECKER") {
+      switch (WORKSPACE) {
+       case ~/.*\\FUNCTIONAL\\.*/:
+        pTestType = "FUNCTIONAL"
+        break
+       case ~/.*\\STRESS\\.*/:
+        pTestType = "STRESS"
+        break
+       case ~/.*\\ROBUSTNESS\\.*/:
+        pTestType = "ROBUSTNESS"
+        break
+       default:
+        pTestType = "UNASSIGNED"
+        break
+      }
+     println pTestType
      }
-    println pTrigger
     }
    }
   }
-}
     }
