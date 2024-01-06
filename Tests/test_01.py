@@ -32,7 +32,7 @@ class Test_01:
 class Test_02:
     DATA_X = (
         1,
-        1,
+        2,
         1,
         1
     )
@@ -44,7 +44,7 @@ class Test_02:
         1
     )
 
-    @pytest.mark.skip
+    @pytest.mark.sanity
     @pytest.mark.usefixtures('print_fixture_use')
     @pytest.mark.parametrize("x1_values", DATA_X)
     def test_x1(self, x1_values):
