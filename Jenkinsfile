@@ -1,7 +1,7 @@
 pipeline {
- agent {
-  label "${params.SLAVE_LABEL}"
- }
+ agent any
+
+ 
  options {
   timestamps ()
  }
