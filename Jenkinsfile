@@ -1,12 +1,11 @@
 pipeline {
- agent any
+    agent any
 
- stages {
-  stage ('Assign Test Type') {
-   steps {
-    powershell pytest ./Tests/
-     }
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
     }
-   }
-  }
-
+}
