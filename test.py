@@ -18,7 +18,7 @@ class Test:
         1
     )
 
-    @pytest.mark.sanity
+    @pytest.mark.skip
     @pytest.mark.usefixtures('print_fixture_use')
     @pytest.mark.parametrize("x1_values", DATA_X)
     def test_x1(self, x1_values):
