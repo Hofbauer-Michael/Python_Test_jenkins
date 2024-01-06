@@ -3,8 +3,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Checkout Codebase') {
             steps {
+                cleanWs()
                 git branch: 'main', url: 'https://github.com/Hofbauer-Michael/Python_Test_jenkins.git'
                 
 
