@@ -7,22 +7,21 @@ pipeline {
             steps {
                 cleanWs()
                 git branch: 'main', url: 'https://github.com/Hofbauer-Michael/Python_Test_jenkins.git'
-            }
+
+            }           
+
+
         }
-        stage('build') {
+
+        stage('test') {
             steps {
-                powershell 'pytest -v test.py -report'
 
-                
+                powershell 'pytest -v test.py'
+                powershell './mvnw clean install site surefire-report:target'
+                powershell 'tree'
 
-        
-            }
-        }
-    }
+            }           
 
-    post {
-        always{
-            junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
 
         }
 
