@@ -16,9 +16,8 @@ pipeline {
         stage('test') {
             steps {
 
-                powershell 'pytest -v test.py'
-                powershell './mvnw clean install site surefire-report:target'
-                powershell 'tree'
+                 pytest --junitxml=reports/test.xml
+
 
             }           
 
