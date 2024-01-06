@@ -13,7 +13,7 @@ pipeline {
         }
         stage('test') {
             steps {
-                powershell 'python -v test.py'
+                powershell 'pytest -v test.py'
                 
 
         
