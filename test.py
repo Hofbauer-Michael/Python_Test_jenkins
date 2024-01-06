@@ -7,7 +7,7 @@ class Test:
     DATA_X = (
         1,
         1,
-        1,
+        2,
         1
     )
 
