@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                powershell 'python --version'
+                git 'https://github.com/Hofbauer-Michael/Python_Test_jenkins.git'
 
         
             }
