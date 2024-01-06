@@ -22,7 +22,7 @@ pipeline {
 
     post {
         always{
-            echo 'report'
+            junit allowEmptyResults: true, testResults: 'target/*.xml'
 
         }
 
