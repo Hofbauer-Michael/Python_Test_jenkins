@@ -20,10 +20,7 @@ pipeline {
             }
         }                
 
-        
-            }
-        }
-    }
+
 
     post {
         always{
