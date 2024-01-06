@@ -11,7 +11,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                powershell 'pytest -v test.py'
+                powershell 'pytest -v test.py -report'
 
                 
 
